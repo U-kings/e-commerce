@@ -57,9 +57,13 @@ function images3() {
 
 function watch() {
   browserSync.init({
+    // watch: true,
+    // open: false,
     server: {
       baseDir: "./",
     },
+    // "browser": ["chrome"]
+    browser: ["chrome.exe"]
   });
 
   gulp.watch("./*.html").on("change", browserSync.reload);
